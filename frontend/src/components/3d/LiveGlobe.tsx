@@ -13,7 +13,7 @@ function getRandomLocation() {
 }
 
 export default function LiveGlobe({ latestEvent }: { latestEvent: any }) {
-  const globeEl = useRef<any>()
+  const globeEl = useRef<any>(null)
   const [arcsData, setArcsData] = useState<any[]>([])
   
   // Custom hook for window size to make globe responsive

@@ -9,7 +9,8 @@ export default function MeridianDashboard() {
   const [pipelineMetrics, setPipelineMetrics] = useState<any>(null)
   const [aiMetrics, setAiMetrics] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const { lastMessage } = useWsContext()
+  const { events } = useWsContext()
+  const lastMessage = events?.[0] || null
 
   useEffect(() => {
     // Initial fetch to paint the screen immediately

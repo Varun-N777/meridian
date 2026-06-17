@@ -74,7 +74,7 @@ const nodeTypes = {
 
 /* ── Graph Component ──────────────────────────────── */
 
-const initialNodes = [
+const initialNodes: any[] = [
   // Inputs (Left)
   { id: 'in_traffic', type: 'inputNode', position: { x: 100, y: 150 }, data: { label: 'Web Traffic', subLabel: 'Page Views', icon: Activity, color: '#3B82F6' } },
   { id: 'in_auth', type: 'inputNode', position: { x: 100, y: 250 }, data: { label: 'Auth Events', subLabel: 'Logins/Regs', icon: LogIn, color: '#10B981' } },
@@ -89,7 +89,7 @@ const initialNodes = [
   { id: 'out_nba', type: 'outputNode', position: { x: 800, y: 350 }, data: { label: 'Next Best Action', subLabel: 'UI Personalization', icon: Zap, colorClass: 'yellow', isActive: false } },
 ]
 
-const initialEdges = [
+const initialEdges: any[] = [
   { id: 'e_traffic_ai', source: 'in_traffic', target: 'ai_core', animated: true, style: { stroke: '#334155' } },
   { id: 'e_auth_ai', source: 'in_auth', target: 'ai_core', animated: true, style: { stroke: '#334155' } },
   { id: 'e_txn_ai', source: 'in_txn', target: 'ai_core', animated: true, style: { stroke: '#334155' } },
