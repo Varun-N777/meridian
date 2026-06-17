@@ -67,7 +67,7 @@ class Settings(BaseSettings):
     GEMINI_MODEL: str = "gemini-2.5-flash"
     
     # CORS
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS: List[str] = ["*"]
     
     class Config:
         env_file = ".env"
