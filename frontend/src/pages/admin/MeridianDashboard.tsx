@@ -33,9 +33,10 @@ export default function MeridianDashboard() {
 
   // Listen for WebSocket updates from metrics_broadcaster
   useEffect(() => {
-    if (lastMessage && lastMessage.type === 'metrics_update') {
-      setPipelineMetrics(lastMessage.data.pipeline)
-      setAiMetrics(lastMessage.data.ai_efficiency)
+    const msg: any = lastMessage
+    if (msg && msg.type === 'metrics_update') {
+      setPipelineMetrics(msg.data.pipeline)
+      setAiMetrics(msg.data.ai_efficiency)
     }
   }, [lastMessage])
 
